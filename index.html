@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="manifest" href="manifest.json" />
     <link rel="icon" href="icons/circle.svg" />
-
   </head>
   <body>
     <h1>Period tracker</h1>
@@ -28,7 +27,24 @@
       </p>
     </form>
     <section id="past-periods"></section>
-    
+
     <script src="app.js" defer></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js").then(
+          (registration) => {
+            console.log(
+              "Service worker registration successful:",
+              registration
+            );
+          },
+          (error) => {
+            console.error(`Service worker registration failed: ${error}`);
+          }
+        );
+      } else {
+        console.error("Service workers are not supported.");
+      }
+    </script>
   </body>
 </html>
