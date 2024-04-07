@@ -11,6 +11,7 @@ const APP_STATIC_RESOURCES = [
   "/app.js",
   "/style.css",
   "/icons/wheel.svg",
+  "/manifest.json"
 ];
 
 // On install, cache the static resources
@@ -52,12 +53,15 @@ self.addEventListener("fetch", (event) => {
   // For all other requests, go to the cache first, and then the network.
   event.respondWith(
     (async () => {
+        console.log(CACHE_NAME);
       const cache = await caches.open(CACHE_NAME);
       const cachedResponse = await cache.match(event.request.url);
       if (cachedResponse) {
         // Return the cached response if it's available.
         return cachedResponse;
       }
+      console.log('error');
+
       // If resource isn't in the cache, return a 404.
       return new Response(null, { status: 404 });
     })(),
