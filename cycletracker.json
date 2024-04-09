@@ -1,28 +1,28 @@
 {
-  "name": "cycleTracker: Period Tracking app",
-  "short_name": "CT",
-  "description": "Securely and confidentially track your menstrual cycle. Enter the start and end dates of your periods, saving your private data to your browser on your device, without sharing it with the rest of the world.",
-  "start_url": "/",
-  "theme_color": "#eeffee",
   "background_color": "#eeffee",
+  "description": "Securely and confidentially track your menstrual cycle. Enter the start and end dates of your periods, saving your private data to your browser on your device, without sharing it with the rest of the world.",
   "display": "standalone",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "48x48"
+      "sizes": "48x48",
+      "src": "favicon.ico"
     },
     {
-      "src": "icons/circle.svg",
+      "purpose": "maskable",
       "sizes": "72x72 96x96",
-      "purpose": "maskable"
+      "src": "icons/circle.svg"
     },
     {
-      "src": "icons/tire.svg",
-      "sizes": "128x128 256x256"
+      "sizes": "128x128 256x256",
+      "src": "icons/tire.svg"
     },
     {
-      "src": "icons/wheel.svg",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "src": "icons/wheel.svg"
     }
-  ]
+  ],
+  "name": "cycleTracker: Period Tracking app",
+  "short_name": "CT",
+  "start_url": "/pwa_train",
+  "theme_color": "#eeffee"
 }
