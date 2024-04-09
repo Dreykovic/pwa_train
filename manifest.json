@@ -4,10 +4,6 @@
   "display": "standalone",
   "icons": [
     {
-      "sizes": "48x48",
-      "src": "circle.ico"
-    },
-    {
       "purpose": "maskable",
       "sizes": "72x72 96x96",
       "src": "icons/circle.svg"
