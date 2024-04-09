@@ -1,16 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Cycle Tracker</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="manifest" href="manifest.json" />
+    <link rel="manifest" href="cycletracker.json" />
     <link rel="icon" href="icons/circle.svg" />
   </head>
   <body>
     <h1>Period tracker</h1>
-    <form>
+    <form id="new-period">
       <fieldset>
         <legend>Enter your period start and end date</legend>
         <p>
@@ -27,23 +27,10 @@
       </p>
     </form>
     <section id="past-periods"></section>
-
     <script src="app.js" defer></script>
     <script>
       if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("sw.js").then(
-          (registration) => {
-            console.log(
-              "Service worker registration successful:",
-              registration
-            );
-          },
-          (error) => {
-            console.error(`Service worker registration failed: ${error}`);
-          }
-        );
-      } else {
-        console.error("Service workers are not supported.");
+        navigator.serviceWorker.register("sw.js");
       }
     </script>
   </body>
